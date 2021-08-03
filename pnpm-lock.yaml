@@ -4,7 +4,6 @@ specifiers:
   '@testing-library/jest-dom': ^5.11.4
   '@testing-library/react': ^11.1.0
   '@testing-library/user-event': ^12.1.10
-  pnpm: ^6.11.5
   react: ^17.0.2
   react-dom: ^17.0.2
   react-scripts: 4.0.3
@@ -18,9 +17,6 @@ dependencies:
   react-dom: 17.0.2_react@17.0.2
   react-scripts: 4.0.3_react@17.0.2
   web-vitals: 1.1.2
-
-devDependencies:
-  pnpm: 6.11.5
 
 packages:
 
@@ -8396,12 +8392,6 @@ packages:
     transitivePeerDependencies:
       - typescript
     dev: false
-
-  /pnpm/6.11.5:
-    resolution: {integrity: sha512-TXMSRyncP88F4GTdKFIIi3kdXSYf+v3uvIKLfNjPTt2YjsrbKmYNCR3VsGjYwlMVSnH2UEo2/sM2VNSefH9Isw==}
-    engines: {node: '>=12.17'}
-    hasBin: true
-    dev: true
 
   /portfinder/1.0.28:
     resolution: {integrity: sha512-Se+2isanIcEqf2XMHjyUKskczxbPH7dQnlMjXX6+dybayyHvAf/TCgyMRlzf/B6QDhAEFOGes0pzRo3by4AbMA==}
