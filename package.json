@@ -1,5 +1,4 @@
 {
-  "prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skiping pnpm install",
   "name": "markdown-editor",
   "version": "0.1.0",
   "private": true,
