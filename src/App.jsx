@@ -1,12 +1,12 @@
 //import logo from './logo.svg';
 import './App.scss';
-import Main from './components/Main'
 import { Provider } from 'react-redux';
+import Main, { store } from './components/Main'
 function App() {
   return (
-    < >
-    <Main />
-    </>
+    <Provider store={store} >
+      <Main />
+    </Provider>
   );
 }
 
