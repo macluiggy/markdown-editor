@@ -7,6 +7,12 @@ Hello there, I'm [Luiggy](https://github.com/macluiggy), welcome to my Markdown 
 The project was built for learning purposes as a part of Front End Libraries Certification by freeCodeCamp.
 
 You can find the challenge by clicking [here](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer)
+
+![freeCodeCamp](https://raw.githubusercontent.com/sitek94/pomodoro-clock/master/free-code-camp.png)
+
+## Marked - Markdown Parser
+[Marked] lets you convert [Markdown] into \`HTML\`.  Markdown is a simple text format whose goal is to be very easy to read and write, even when not converted to HTML.  This demo page will let you type anything you like and see how it gets converted.  Live.  No more waiting around.
+
 How To Use It?
 -------------------
 

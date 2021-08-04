@@ -3,20 +3,40 @@
 main {
 	//@include border(red);
 	text-align: center;
-	#editor {
-		@include border(blue);
+	.editor_container {
+		//@include border(blue);
+		border: solid 1px;
 		width: 40%;
-		height: 30vh;
+		margin: 1em auto;
+
+		.editor {
+			height: 30px;
+			//@include border(red);
+			border-bottom: solid 1px;
+			text-align: left;
+			padding: 0 1em;
+		}
+		#editor {
+			//@include border(blue);
+			width: 98%;
+			height: 30vh;
+			border: none;
+			outline: none;
+		}
 	}
 	.preview_container {
 		@include border(black);
 		width: 75%;
+		height: 70vh;
+		overflow: scroll;
 		margin: auto;
 		text-align: left;
 		padding: 1.5em;
 	}
 }
-
+img {
+	width: 100%;
+}
 pre {
 	//@include border(green);
 	background-color: black;

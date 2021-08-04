@@ -1,6 +1,7 @@
 const Editor = ({ text, onChangeText }) => {
 	return (
-			<div>
+			<div className='editor_container'>
+				<div className='editor' >Editor</div>
 				<textarea 
 				name="text-editor" 
 				id="editor"
