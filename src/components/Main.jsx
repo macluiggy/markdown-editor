@@ -5,21 +5,21 @@ import { connect, Provider } from 'react-redux';
 const initialState = {
 	text: 'hola',
 }
-const ON_CHANGE = 'ON_CHANGE';
+const UPDATE_TEXT = 'UPDATE_TEXT';
 //actions
-const updateTextAction = (newText) => {
+const updateTextAction = newText => {
 	return {
-		type: ON_CHANGE,
-		text: newText,
+		type: UPDATE_TEXT,
+		newText: newText,
 	}
 }
 
 const reducer = (state = initialState, action) => {
 	//console.log(state.text)
 	switch (action.type) {
-		case ON_CHANGE:
+		case UPDATE_TEXT:
 			return {
-				text: action.text,
+				text: action.newText
 			}
 		default:
 			return state;
@@ -30,8 +30,7 @@ export const store = createStore(reducer);
 const Main = ({ state, updateText }) => {
 	const { text } = state;
 	console.log(state)
-
-	const onChangeEditor = e => {
+	const onChangeText = e => {
 		updateText(e.target.value)
 	}
 	return (
@@ -43,12 +42,12 @@ const Main = ({ state, updateText }) => {
 				value={text}
 				cols="30" 
 				rows="10"
-				onChange={onChangeEditor} >
+				onChange={onChangeText} >
 					
 				</textarea>
 			</div>
 			<div id='preview' >
-				
+				{text}
 			</div>
 		</div>
 		)
@@ -62,10 +61,9 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = dispatch => {
 	return {
-		updateText: (newText) => {
-			dispatch(updateTextAction(newText))
+		updateText: newText => dispatch(updateTextAction(newText)),
 	}
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(Main)
