@@ -19,7 +19,7 @@ const reducer = (state = initialState, action) => {
 	switch (action.type) {
 		case ON_CHANGE:
 			return {
-				...state,
+				text: action.text,
 			}
 		default:
 			return state;
