@@ -2,7 +2,7 @@ import React from 'react';
 import marked from 'marked';
 import { reducer, mapStateToProps, mapDispatchToProps } from '../reducers'
 import { createStore } from 'redux';
-import { connect } from 'react-redux';
+import { connect, Provider } from 'react-redux';
 
 import Editor from './Editor';
 //redux
