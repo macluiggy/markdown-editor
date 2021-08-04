@@ -27,8 +27,8 @@ const Main = ({ state, updateText }) => {
 			<Editor
 			 text={text}
 			 onChangeText={onChangeText} />
-			<div id='preview' >
-				<div dangerouslySetInnerHTML={renderText(text)}></div>
+			<div className='preview_container' >
+				<div id='preview' dangerouslySetInnerHTML={renderText(text)}></div>
 			</div>
 		</main>
 		)

@@ -1,7 +1,6 @@
-
-
+import initalMarkdownn from './initial-markdown'
 const initialState = {
-	text: 'hola',
+	text: initalMarkdownn,
 }
 const UPDATE_TEXT = 'UPDATE_TEXT';
 //actions

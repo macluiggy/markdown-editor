@@ -1,10 +1,29 @@
 @import 'mixins';
 
 main {
-	@include border(red);
+	//@include border(red);
 	text-align: center;
 	#editor {
 		@include border(blue);
-		width: 50%;
+		width: 40%;
+		height: 30vh;
+	}
+	.preview_container {
+		@include border(black);
+		width: 75%;
+		margin: auto;
+		text-align: left;
+		padding: 1.5em;
+	}
+}
+
+pre {
+	//@include border(green);
+	background-color: black;
+	color: white;
+	padding: 1.5em;
+
+	code {
+		//@include border(orange);
 	}
 }
