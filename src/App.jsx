@@ -1,12 +1,10 @@
 //import logo from './logo.svg';
 import './App.scss';
-import Contador from './components/Contador';
-
+import { Provider } from 'react-redux';
 function App() {
   return (
-    <div className="App">
-      <Contador />
-    </div>
+    < >
+    </>
   );
 }
 
