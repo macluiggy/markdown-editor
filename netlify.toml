@@ -3,4 +3,4 @@
   NPM_FLAGS = "--prefix=/dev/null"
 [build]
   publish = "build"
-  command = "CI='' npm run build"
+  command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run build"

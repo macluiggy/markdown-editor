@@ -1,4 +1,4 @@
-export default ({ text, onChangeText }) => {
+const Editor = ({ text, onChangeText }) => {
 	return (
 			<div>
 				<textarea 
@@ -12,3 +12,5 @@ export default ({ text, onChangeText }) => {
 			</div>
 		)
 }
+
+export default Editor

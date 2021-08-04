@@ -1,6 +1,6 @@
 import React from 'react';
 import marked from 'marked';
-import { reducer, updateTextAction, mapStateToProps, mapDispatchToProps } from '../reducers'
+import { reducer, mapStateToProps, mapDispatchToProps } from '../reducers'
 import { createStore } from 'redux';
 import { connect } from 'react-redux';
 
