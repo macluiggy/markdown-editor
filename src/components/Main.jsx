@@ -1,6 +1,7 @@
 import React from 'react';
 import { createStore } from 'redux';
 import { connect, Provider } from 'react-redux';
+import marked from 'marked';
 //redux
 const initialState = {
 	text: 'hola',
@@ -33,6 +34,10 @@ const Main = ({ state, updateText }) => {
 	const onChangeText = e => {
 		updateText(e.target.value)
 	}
+	const renderText = text => {
+		const __html = marked(text, {sensitize: true});
+		return {__html}
+	}
 	return (
 		<div>
 			<div>
@@ -47,7 +52,7 @@ const Main = ({ state, updateText }) => {
 				</textarea>
 			</div>
 			<div id='preview' >
-				{text}
+				<div dangerouslySetInnerHTML={renderText(text)}></div>
 			</div>
 		</div>
 		)
