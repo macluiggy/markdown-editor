@@ -5,13 +5,19 @@ import { connect, Provider } from 'react-redux';
 const initialState = {
 	text: 'hola',
 }
+const UPDATE_TEXT = 'UPDATE_TEXT';
 //actions
-const HOLA = 'HOLA';
+const updateTextAction = newText => {
+	return {
+		type: UPDATE_TEXT,
+		newText: newText,
+	}
+}
 
 const reducer = (state = initialState, action) => {
 	//console.log(state.text)
 	switch (action.type) {
-		case HOLA:
+		case UPDATE_TEXT:
 			return {
 				text: action.newText
 			}
@@ -21,9 +27,12 @@ const reducer = (state = initialState, action) => {
 }
 export const store = createStore(reducer);
 //react
-const Main = ({ state, fn }) => {
+const Main = ({ state, updateText }) => {
 	const { text } = state;
 	console.log(state)
+	const onChangeText = e => {
+		updateText(e.target.value)
+	}
 	return (
 		<div>
 			<div>
@@ -33,12 +42,12 @@ const Main = ({ state, fn }) => {
 				value={text}
 				cols="30" 
 				rows="10"
-				onChange={(e) => fn({ type: HOLA, newText: e.target.value })} >
+				onChange={onChangeText} >
 					
 				</textarea>
 			</div>
 			<div id='preview' >
-				
+				{text}
 			</div>
 		</div>
 		)
@@ -52,7 +61,7 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = dispatch => {
 	return {
-		fn: (d) => dispatch(d),
+		updateText: newText => dispatch(updateTextAction(newText)),
 	}
 }
 
