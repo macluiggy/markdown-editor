@@ -1,12 +1,14 @@
 import React from 'react';
+import '../sass/Main.scss'
 import marked from 'marked';
 import { reducer, mapStateToProps, mapDispatchToProps } from '../reducers'
 import { createStore } from 'redux';
 import { connect } from 'react-redux';
-
 import Editor from './Editor';
+
 //redux
 export const store = createStore(reducer);
+
 //react
 const Main = ({ state, updateText }) => {
 	const { text } = state;
@@ -21,14 +23,14 @@ const Main = ({ state, updateText }) => {
 	}
 
 	return (
-		<div>
+		<main>
 			<Editor
 			 text={text}
 			 onChangeText={onChangeText} />
 			<div id='preview' >
 				<div dangerouslySetInnerHTML={renderText(text)}></div>
 			</div>
-		</div>
+		</main>
 		)
 }
 

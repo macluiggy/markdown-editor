@@ -1,0 +1,10 @@
+@import 'mixins';
+
+main {
+	@include border(red);
+	text-align: center;
+	#editor {
+		@include border(blue);
+		width: 50%;
+	}
+}
