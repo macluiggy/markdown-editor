@@ -4,7 +4,7 @@ const initialState = {
 }
 const UPDATE_TEXT = 'UPDATE_TEXT';
 
-export default function (state = initialState, action) {
+export default function initalMarkdownnReducer (state = initialState, action) {
 	//console.log(state.text)
 	switch (action.type) {
 		case UPDATE_TEXT:

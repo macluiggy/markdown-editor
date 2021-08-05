@@ -1,14 +1,10 @@
 import React from 'react';
 import '../sass/Main.scss'
 import marked from 'marked';
-//import { mapStateToProps, mapDispatchToProps } from '../reducers/initialMarkdownReducer.js'
-import { createStore } from 'redux';
 import { connect } from 'react-redux';
 import Editor from './Editor';
-import store from '../store'
 //mapToProps
 import { mapStateToProps, mapDispatchToProps } from '../mapToProps/'
-console.log(store.getState())
 //redux
 
 //react
@@ -36,5 +32,4 @@ const Main = ({ state, updateText }) => {
 		)
 }
 
-//react-redux
 export default connect(mapStateToProps, mapDispatchToProps)(Main)

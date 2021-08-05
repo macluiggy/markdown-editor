@@ -18,18 +18,24 @@ main {
 			//@include border(red);
 			border-bottom: solid 1px;
 			text-align: left;
-			color: black;		align-items: center;
+			color: black;		
 			padding-left: 1em;
 			padding-top: 0.5em;
 			position: relative;
 			.react-logo {
 				padding-right: 0.5em;
 			}
-			.max {
+			.max_mix_container {
 				position: absolute;
-				right: 3%;
-				//@include border(red);
-				font-size: 1.4em;
+				left: 90%;
+				bottom: 5px;
+				.max {
+					//position: absolute;
+					//right: 3%;
+					//@include border(red);
+					font-size: 1.4em;
+					cursor: pointer;
+				}
 			}
 		}
 		#editor {
