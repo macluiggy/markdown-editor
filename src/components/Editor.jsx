@@ -1,9 +1,17 @@
-import logo from '../logo.svg'
-
+import max from '../images/maximize.svg'
 const Editor = ({ text, onChangeText }) => {
 	return (
-			<div className='editor_container'>
-				<div className='editor' ><img src={logo} alt="" /> Editor</div>
+			<div className='editor_container' style={{
+				position: 'absolute',
+			}} >
+				<div className='editor' >
+					<span class="iconify react-logo" data-icon="logos:react" data-inline="false"></span>
+					 Editor
+					 <span
+					  class="iconify max"
+					  data-icon="mdi:fullscreen"
+					  onClick={() => ''} ></span>
+				 </div>
 				<textarea 
 				name="text-editor" 
 				id="editor"
