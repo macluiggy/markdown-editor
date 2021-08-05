@@ -3,13 +3,6 @@ const initialState = {
 	text: initalMarkdownn,
 }
 const UPDATE_TEXT = 'UPDATE_TEXT';
-//actions
-export const updateTextAction = newText => {
-	return {
-		type: UPDATE_TEXT,
-		newText: newText,
-	}
-}
 
 export default function (state = initialState, action) {
 	//console.log(state.text)
@@ -20,16 +13,5 @@ export default function (state = initialState, action) {
 			}
 		default:
 			return state;
-	}
-}
-
-export const mapStateToProps = state => {
-	return {
-		state: state,
-	}
-}
-export const mapDispatchToProps = dispatch => {
-	return {
-		updateText: newText => dispatch(updateTextAction(newText)),
 	}
 }
