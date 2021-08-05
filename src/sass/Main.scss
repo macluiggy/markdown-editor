@@ -2,19 +2,25 @@
 
 main {
 	//@include border(red);
+	background-color: black;
 	text-align: center;
 	.editor_container {
 		//@include border(blue);
 		border: solid 1px;
 		width: 40%;
 		margin: 1em auto;
+		background-color: white;
 
 		.editor {
 			height: 30px;
 			//@include border(red);
 			border-bottom: solid 1px;
 			text-align: left;
-			padding: 0 1em;
+			padding: 0.5em 0em 0 1em;
+			color: black;
+			img {
+				width: 100%;
+			}
 		}
 		#editor {
 			//@include border(blue);
@@ -22,6 +28,8 @@ main {
 			height: 30vh;
 			border: none;
 			outline: none;
+			background-color: #444;
+			color: white;
 		}
 	}
 	.preview_container {
@@ -32,6 +40,7 @@ main {
 		margin: auto;
 		text-align: left;
 		padding: 1.5em;
+		background-color: white;
 	}
 }
 img {

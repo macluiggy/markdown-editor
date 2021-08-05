@@ -1,7 +1,9 @@
+import logo from '../logo.svg'
+
 const Editor = ({ text, onChangeText }) => {
 	return (
 			<div className='editor_container'>
-				<div className='editor' >Editor</div>
+				<div className='editor' ><img src={logo} alt="" /> Editor</div>
 				<textarea 
 				name="text-editor" 
 				id="editor"
