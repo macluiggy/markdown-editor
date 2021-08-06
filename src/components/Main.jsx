@@ -39,11 +39,12 @@ const Main = ({ state, updateText, maximizePreview, minimizePreview, maxMinPrevi
 					right: absolute2 && '0%',
 					bottom: absolute2 && '250px',
 					height:  absolute2 && '90vh',
-					width: absolute2 && '93%',
+					width: absolute2 && '80%',
 					margin: absolute2 && '1em',
 					zIndex: absolute2 && 20,
 					//border: 'solid red',
 					marginBottom: '1em',
+					margin: 'auto',
 
 				}} >
 				<div className='preview' >
