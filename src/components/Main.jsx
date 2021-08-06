@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import Editor from './Editor';
 //mapToProps
 import { mapStateToProps, mapDispatchToProps } from '../mapToProps/'
-import { BsArrowsAngleExpand, BsArrowsAngleContract } from 'react-icons/bs';
+import { BsArrowsAngleExpand, /*BsArrowsAngleContract*/ } from 'react-icons/bs';
 //redux
 
 //react
@@ -31,7 +31,7 @@ const Main = ({ state, updateText }) => {
 					<span className="iconify react-logo" data-icon="logos:react" data-inline="false"></span>
 					 Preview
 					<div className='max_mix_container'>
-						<BsArrowsAngleContract />
+						<BsArrowsAngleExpand />
 					</div>
 				</div>
 				<div id='preview' dangerouslySetInnerHTML={renderText(text)}></div>
