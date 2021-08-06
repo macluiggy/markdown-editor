@@ -49,16 +49,15 @@ main {
 		}
 	}
 	.preview_container {
-		@include border(black);
+		@include border(red);
 		width: 75%;
-		height: 70vh;
-		overflow: scroll;
 		margin: auto;
 		text-align: left;
 		padding: 1.5em;
 		background-color: white;
 		border: solid 1px;
 		position: relative;
+		overflow: auto;
 
 		.preview {
 			right: -0.1%;
@@ -71,26 +70,36 @@ main {
 			padding-top: 0.7em;
 			.react-logo {
 				padding: 0 0.5em;
+		}
+		#preview {
+			@include border(blue);
+			width: 300px;
+			background-color: blue;
+		}
+		.max_mix_container2 {
+			//@include border(blue);
+			float: right;
+			cursor: pointer;
+			margin-right: 1em;
 			}
-			.max_mix_container2 {
-				//@include border(blue);
-				float: right;
-				cursor: pointer;
-				margin-right: 1em;
+		}
+		pre {
+			//@include border(green);
+			background-color: black;
+			color: white;
+			padding: 1.5em;
+			width: fit-content;
+			position: relative;
+			width: 90vw;
+			hyphens: auto;
+			code {
+				//@include border(orange);
+				word-break: break-all;
+				hyphens: auto;
 			}
 		}
 	}
 }
 img {
 	width: 100%;
-}
-pre {
-	//@include border(green);
-	background-color: black;
-	color: white;
-	padding: 1.5em;
-
-	code {
-		//@include border(orange);
-	}
 }
