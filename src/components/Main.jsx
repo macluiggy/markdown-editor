@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import Editor from './Editor';
 //mapToProps
 import { mapStateToProps, mapDispatchToProps } from '../mapToProps/'
-import { BsArrowsAngleExpand, /*BsArrowsAngleContract*/ } from 'react-icons/bs';
+import { BsArrowsAngleExpand, BsArrowsAngleContract } from 'react-icons/bs';
 //redux
 
 //react
@@ -22,8 +22,11 @@ const Main = ({ state, updateText, maximizePreview, minimizePreview, maxMinPrevi
 		return { __html }
 	}
 	const mxmnPreview = () => {
-		console.log('max min')
-		return absolute2 ? maximizePreview() : minimizePreview();
+		if (absolute2) {
+			minimizePreview()
+		} else {
+			maximizePreview()
+		}
 	}
 
 	return (
@@ -31,17 +34,23 @@ const Main = ({ state, updateText, maximizePreview, minimizePreview, maxMinPrevi
 			<Editor
 			 text={text}
 			 onChangeText={onChangeText} />
-			<div className='preview_container' >
-			<button onClick={() => {
-				console.log('hdhdhd')
-			}}>click</button>
-				<div className='preview' style={{
-					position: absolute2 ? 'absolute' : 'relative',
-				}}>
+			<div className='preview_container' style={{
+					position: absolute2 ? 'relative' : 'relative',
+					right: absolute2 && '0%',
+					bottom: absolute2 && '250px',
+					height:  absolute2 && '90vh',
+					width: absolute2 && '93%',
+					margin: absolute2 && '1em',
+					zIndex: absolute2 && 20
+
+				}} >
+				<div className='preview' >
 					<span className="iconify react-logo" data-icon="logos:react" data-inline="false"></span>
 					 Preview
-					<div className='max_mix_container2'  >
-						<BsArrowsAngleExpand />
+					<div className='max_mix_container2' onClick={mxmnPreview} >
+						{absolute2
+							? <BsArrowsAngleContract />
+							: <BsArrowsAngleExpand />}
 					</div>
 				</div>
 				<div id='preview' dangerouslySetInnerHTML={renderText(text)}></div>

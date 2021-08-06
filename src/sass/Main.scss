@@ -2,7 +2,6 @@
 
 main {
 	//@include border(red);
-	background-color: black;
 	text-align: center;
 	.editor_container {
 		//@include border(green);
@@ -74,9 +73,10 @@ main {
 				padding: 0 0.5em;
 			}
 			.max_mix_container2 {
-				@include border(blue);
+				//@include border(blue);
 				float: right;
 				cursor: pointer;
+				margin-right: 1em;
 			}
 		}
 	}

@@ -9,11 +9,11 @@ export default function maxMinReducer(state = initialState, action) {
 	switch (action.type) {
 		case MAXIMIZE2:
 			return {
-				absolute: action.absolute2,
+				absolute2: action.absolute2,
 			}
 		case MINIMIZE2: 
 			return {
-				absolute: action.absolute2,
+				absolute2: action.absolute2,
 			}
 		default:
 			return state;
