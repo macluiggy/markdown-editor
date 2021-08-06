@@ -73,9 +73,10 @@ main {
 			.react-logo {
 				padding: 0 0.5em;
 			}
-			.max_mix_container {
-				//@include border(blue);
+			.max_mix_container2 {
+				@include border(blue);
 				float: right;
+				cursor: pointer;
 			}
 		}
 	}

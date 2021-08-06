@@ -24,6 +24,8 @@ export const mapDispatchToProps = dispatch => {
 		updateText: newText => dispatch(updateTextAction(newText)),
 		maximize: () => dispatch(maximizeAction()),
 		minimize: () => dispatch(minimizeAction()),
+		maximizePreview: () => dispatch({ type: 'MAXIMIZE2', absolute2: true}),
+		minimizePreview: () => dispatch({ type: 'MINIMIZE2', absolute2: false}),
 	}
 }
 export const mapStateToProps = state => {

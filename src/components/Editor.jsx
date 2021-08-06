@@ -17,6 +17,7 @@ const Editor = ({ text, onChangeText, state, maximize, minimize }) => {
 				left: absolute ? '5%' : 0,
 				width: absolute && '90%',
 				height: absolute && '95vh',
+				zIndex: absolute ? 10 : 0,
 			}} >
 				<div className='editor'>
 					<span className="iconify react-logo" data-icon="logos:react" data-inline="false"></span>

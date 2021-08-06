@@ -9,8 +9,9 @@ import { BsArrowsAngleExpand, /*BsArrowsAngleContract*/ } from 'react-icons/bs';
 //redux
 
 //react
-const Main = ({ state, updateText }) => {
+const Main = ({ state, updateText, maximizePreview, minimizePreview, maxMinPreviewReducer }) => {
 	const { text } = state.state1;
+	const { absolute2 } = state.maxMinPreviewReducer;
 	//console.log(state)
 //console.log(text)
 	const onChangeText = e => {
@@ -20,6 +21,10 @@ const Main = ({ state, updateText }) => {
 		const __html = marked(text, {sensitize: true});
 		return { __html }
 	}
+	const mxmnPreview = () => {
+		console.log('max min')
+		return absolute2 ? maximizePreview() : minimizePreview();
+	}
 
 	return (
 		<main>
@@ -27,10 +32,15 @@ const Main = ({ state, updateText }) => {
 			 text={text}
 			 onChangeText={onChangeText} />
 			<div className='preview_container' >
-				<div className='preview'>
+			<button onClick={() => {
+				console.log('hdhdhd')
+			}}>click</button>
+				<div className='preview' style={{
+					position: absolute2 ? 'absolute' : 'relative',
+				}}>
 					<span className="iconify react-logo" data-icon="logos:react" data-inline="false"></span>
 					 Preview
-					<div className='max_mix_container'>
+					<div className='max_mix_container2'  >
 						<BsArrowsAngleExpand />
 					</div>
 				</div>
