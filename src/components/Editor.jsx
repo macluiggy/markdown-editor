@@ -1,18 +1,14 @@
 import { connect } from 'react-redux';
 import { mapStateToProps, mapDispatchToProps } from '../mapToProps/';
-import { useState } from 'react';
+//import { useState } from 'react';
+import { BsArrowsAngleExpand, BsArrowsAngleContract } from 'react-icons/bs';
+
 
 const Editor = ({ text, onChangeText, state, maximize, minimize }) => {
 	const { absolute } = state.maxMinReducer;
-	const [icon, setIcon] = useState("mdi:fullscreen")
 	//console.log(state)
 	const mxmn = () => {
-		//console.log(`holdddddda`)"mdi:fullscreen"
-		if(absolute) {
-			setIcon("feather:minimize")
-		} else {
-			setIcon("mdi:fullscreen")
-		}
+		//console.log(`log message`)
   	 	return absolute ? minimize() : maximize()
 	}
 	return (
@@ -26,10 +22,9 @@ const Editor = ({ text, onChangeText, state, maximize, minimize }) => {
 					<span className="iconify react-logo" data-icon="logos:react" data-inline="false"></span>
 					 Editor
 					 <div className='max_mix_container' onClick={mxmn}>
-						<span
-						  className="iconify max"
-						  data-icon={icon} >
-						</span>
+						{absolute 
+							? <BsArrowsAngleContract />
+							: <BsArrowsAngleExpand />}
 					 </div>
 				 </div>
 				<textarea 
