@@ -42,9 +42,10 @@ Ready to start writing? Then start changing stuff, have fun!
 \`\`\`
 // this is multi-line code:
 
-const passTests = code => code.includes(multiLineCode) 
-	? true
-	: false
+const passTests = code => 
+	code.includes(multiLineCode) 
+		? true
+		: false
 
 \`\`\`
 

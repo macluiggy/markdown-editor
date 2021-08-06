@@ -11,6 +11,10 @@ main {
 		background-color: white;
 		//position: fixed;
 		left: 30%;
+		border-radius: 0.5em;
+		@media screen and (max-width: 600px) {
+			width: 70%;
+		}
 
 		.editor {
 			height: 30px;
@@ -50,6 +54,7 @@ main {
 	}
 	.preview_container {
 		@include border(red);
+		border-radius: 0.5em;
 		width: 75%;
 		margin: auto;
 		text-align: left;
@@ -57,7 +62,8 @@ main {
 		background-color: white;
 		border: solid 1px;
 		position: relative;
-		overflow: auto;
+		overflow: scroll;
+		height: 500px;
 
 		.preview {
 			right: -0.1%;
@@ -90,10 +96,11 @@ main {
 			padding: 1.5em;
 			width: fit-content;
 			position: relative;
-			width: 90vw;
+			width: 89%;
 			hyphens: auto;
 			code {
 				//@include border(orange);
+				font-size: 0.8em;
 				word-break: break-all;
 				hyphens: auto;
 			}

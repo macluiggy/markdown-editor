@@ -42,7 +42,8 @@ const Main = ({ state, updateText, maximizePreview, minimizePreview, maxMinPrevi
 					width: absolute2 && '93%',
 					margin: absolute2 && '1em',
 					zIndex: absolute2 && 20,
-					border: 'solid red',
+					//border: 'solid red',
+					marginBottom: '1em',
 
 				}} >
 				<div className='preview' >
